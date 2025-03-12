@@ -20,12 +20,15 @@
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
     <!-- select2 Css link -->
     <link rel="stylesheet" href="assets/css/select2.min.css" />
+    <!-- aos css link -->
+    <link rel="stylesheet" href="assets/css/aos.css" />
     <!-- Nice select Css-link -->
     <link rel="stylesheet" href="assets/css/nice-select.css" />
     <!-- Meanmenu css link -->
     <link rel="stylesheet" href="assets/css/meanmenu.css" />
     <!-- rangeSlider Css link -->
     <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css" />
+
     <!-- Style Css link -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
@@ -88,13 +91,13 @@
                 <a class="nav-link" href="about.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="feature.html">Top Up</a>
+                <a class="nav-link" href="products.html">Top Up</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog.html"> Voucher</a>
+                <a class="nav-link" href="products.html"> Voucher</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="faq.html"> Gift Card</a>
+                <a class="nav-link" href="products.html"> Gift Card</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
@@ -257,6 +260,49 @@
                 </div>
               </div>
               <div class="sidebar-widget-area">
+                <h5 class="widget-title">Categories</h5>
+                <div class="checkbox-categories-area">
+                  <div class="categories-list">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckChecked"
+                      />
+                      <label class="form-check-label" for="flexCheckChecked">
+                        <span>Top Up </span>
+                        <span class="">(20)</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckChecked2"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexCheckChecked2">
+                        <span>Vouchers</span>
+                        <span class="">(45)</span>
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckChecked3"
+                      />
+                      <label class="form-check-label" for="flexCheckChecked3">
+                        <span>Gift card</span> <span class="">(10)</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-widget-area">
                 <h5 class="widget-title">Filter by price</h5>
                 <div class="range-area">
                   <input
@@ -265,75 +311,6 @@
                     name="my_range"
                     value=""
                   />
-                </div>
-              </div>
-              <div class="sidebar-widget-area">
-                <h5 class="widget-title">region</h5>
-                <select class="cmn-select2" name="state">
-                  <option value="AL">Select</option>
-                  <option value="AL">Bangladesh</option>
-                  <option value="WY">Australia</option>
-                  <option value="WY">Belarus</option>
-                  <option value="WY">Canada</option>
-                  <option value="WY">China</option>
-                  <option value="WY">France</option>
-                  <option value="WY">Germany</option>
-                  <option value="WY">India</option>
-                  <option value="WY">Indonesia</option>
-                  <option value="WY">Italy</option>
-                  <option value="WY">Japan</option>
-                  <option value="WY">Korea</option>
-                </select>
-              </div>
-              <div class="sidebar-widget-area">
-                <h5 class="widget-title">Categories</h5>
-                <div class="checkbox-categories-area">
-                  <div class="section-inner">
-                    <div class="categories-list">
-                      <a href="" class="category-link">
-                        <div class="d-flex align-items-center gap-2">
-                          <i class="fa-regular fa-laptop"></i>
-                          PC
-                        </div>
-                        <span>02</span>
-                      </a>
-                      <a href="" class="category-link">
-                        <div class="d-flex align-items-center gap-2">
-                          <i class="fa-brands fa-playstation"></i>
-                          Playstation
-                        </div>
-                        <span>12</span>
-                      </a>
-                      <a href="" class="category-link">
-                        <div class="d-flex align-items-center gap-2">
-                          <i class="fa-regular fa-globe"></i>
-                          Webgame
-                        </div>
-                        <span>22</span>
-                      </a>
-                      <a href="" class="category-link">
-                        <div class="d-flex align-items-center gap-2">
-                          <i class="fa-regular fa-mobile"></i>
-                          Mobile
-                        </div>
-                        <span>15</span>
-                      </a>
-                      <a href="" class="category-link">
-                        <div class="d-flex align-items-center gap-2">
-                          <i class="fa-brands fa-xbox"></i>
-                          Xbox
-                        </div>
-                        <span>08</span>
-                      </a>
-                      <a href="" class="category-link">
-                        <div class="d-flex align-items-center gap-2">
-                          <i class="fa-regular fa-light-switch"></i>
-                          Nintendo Switch
-                        </div>
-                        <span>10</span>
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -373,13 +350,13 @@
               </div>
             </div>
             <div class="mt-20">
-              <div class="row g-3 g-sm-4">
+              <div class="row g-4">
                 <div class="col-xl-3 col-md-4 col-6">
                   <a href="product-details.html" class="product-box">
                     <div class="img-box">
                       <img
                         src="./assets/img/products/big/clash-of-clan.webp"
-                        alt="product-img"
+                        alt=""
                       />
                     </div>
                     <div class="text-box">
@@ -392,10 +369,7 @@
                 <div class="col-xl-3 col-md-4 col-6">
                   <a href="product-details.html" class="product-box">
                     <div class="img-box">
-                      <img
-                        src="./assets/img/products/big/6.webp"
-                        alt="product-img"
-                      />
+                      <img src="./assets/img/products/big/6.png" alt="" />
                     </div>
                     <div class="text-box">
                       <div class="top-info">
@@ -407,14 +381,11 @@
                 <div class="col-xl-3 col-md-4 col-6">
                   <a href="product-details.html" class="product-box">
                     <div class="img-box">
-                      <img
-                        src="./assets/img/products/big/5.png"
-                        alt="product-img"
-                      />
+                      <img src="./assets/img/products/big/5.png" alt="" />
                     </div>
                     <div class="text-box">
                       <div class="top-info">
-                        <div class="title">Free Fire Diamonds</div>
+                        <div class="title">Free Fire</div>
                       </div>
                     </div>
                   </a>
@@ -424,7 +395,7 @@
                     <div class="img-box">
                       <img
                         src="./assets/img/products/big/league-of-legends.png"
-                        alt="product-img"
+                        alt=""
                       />
                     </div>
                     <div class="text-box">
@@ -439,7 +410,7 @@
                     <div class="img-box">
                       <img
                         src="./assets/img/products/big/Path-of-Exile-POE-TH.png"
-                        alt="product-img"
+                        alt=""
                       />
                     </div>
                     <div class="text-box">
@@ -454,7 +425,7 @@
                     <div class="img-box">
                       <img
                         src="./assets/img/products/big/bom-beach.png"
-                        alt="product-img"
+                        alt=""
                       />
                     </div>
                     <div class="text-box">
@@ -1003,6 +974,49 @@
           </div>
         </div>
         <div class="sidebar-widget-area">
+          <h5 class="widget-title">Categories</h5>
+          <div class="checkbox-categories-area">
+            <div class="categories-list">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  <span>Top Up </span>
+                  <span class="">(20)</span>
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked2"
+                  checked
+                />
+                <label class="form-check-label" for="flexCheckChecked2">
+                  <span>Vouchers</span>
+                  <span class="">(45)</span>
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckChecked3"
+                />
+                <label class="form-check-label" for="flexCheckChecked3">
+                  <span>Gift card</span> <span class="">(10)</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-widget-area">
           <h5 class="widget-title">Filter by price</h5>
           <div class="range-area">
             <input
@@ -1011,75 +1025,6 @@
               name="my_range"
               value=""
             />
-          </div>
-        </div>
-        <div class="sidebar-widget-area">
-          <h5 class="widget-title">region</h5>
-          <select class="cmn-select2" name="state">
-            <option value="AL">Select</option>
-            <option value="AL">Bangladesh</option>
-            <option value="WY">Australia</option>
-            <option value="WY">Belarus</option>
-            <option value="WY">Canada</option>
-            <option value="WY">China</option>
-            <option value="WY">France</option>
-            <option value="WY">Germany</option>
-            <option value="WY">India</option>
-            <option value="WY">Indonesia</option>
-            <option value="WY">Italy</option>
-            <option value="WY">Japan</option>
-            <option value="WY">Korea</option>
-          </select>
-        </div>
-        <div class="sidebar-widget-area">
-          <h5 class="widget-title">Categories</h5>
-          <div class="checkbox-categories-area">
-            <div class="section-inner">
-              <div class="categories-list">
-                <a href="" class="category-link">
-                  <div class="d-flex align-items-center gap-2">
-                    <i class="fa-regular fa-laptop"></i>
-                    PC
-                  </div>
-                  <span>02</span>
-                </a>
-                <a href="" class="category-link">
-                  <div class="d-flex align-items-center gap-2">
-                    <i class="fa-brands fa-playstation"></i>
-                    Playstation
-                  </div>
-                  <span>12</span>
-                </a>
-                <a href="" class="category-link">
-                  <div class="d-flex align-items-center gap-2">
-                    <i class="fa-regular fa-globe"></i>
-                    Webgame
-                  </div>
-                  <span>22</span>
-                </a>
-                <a href="" class="category-link">
-                  <div class="d-flex align-items-center gap-2">
-                    <i class="fa-regular fa-mobile"></i>
-                    Mobile
-                  </div>
-                  <span>15</span>
-                </a>
-                <a href="" class="category-link">
-                  <div class="d-flex align-items-center gap-2">
-                    <i class="fa-brands fa-xbox"></i>
-                    Xbox
-                  </div>
-                  <span>08</span>
-                </a>
-                <a href="" class="category-link">
-                  <div class="d-flex align-items-center gap-2">
-                    <i class="fa-regular fa-light-switch"></i>
-                    Nintendo Switch
-                  </div>
-                  <span>10</span>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
