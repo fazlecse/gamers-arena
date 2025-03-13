@@ -273,10 +273,11 @@ h5 {
 }
 
 h6 {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 22px;
   margin-bottom: 0;
   font-family: var(--heading-font);
+  color: rgb(var(--white));
 }
 
 img {
@@ -310,7 +311,7 @@ body {
 
 @media (max-width: 991px) {
   body {
-    font-size: 16px;
+    padding-bottom: 50px !important;
   }
 }
 html {
@@ -2051,7 +2052,6 @@ Cmn tab section start
 }
 
 .cmn-tabs .nav-pills .nav-link {
-  padding: 8px 20px;
   text-transform: capitalize;
   color: rgb(var(--heading-color));
   font-family: var(--heading-font);
@@ -2087,6 +2087,14 @@ Cmn tab section start
   border: 2px solid rgb(var(--primary-color));
 }
 
+@media (max-width: 767px) {
+  .cmn-tabs .nav-pills .nav-link i {
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
 /*----------------------------------------------
 Cmn tab section end
 ----------------------------------------------*/
@@ -2176,6 +2184,11 @@ section {
   margin-bottom: 10px;
 }
 
+@media (max-width: 991px) {
+  .section-title {
+    margin: 0 auto 10px;
+  }
+}
 .section-subtitle {
   position: relative;
   display: inline-flex;
@@ -4204,6 +4217,8 @@ Custom radio container start
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
+  max-height: 200px;
+  overflow: auto;
 }
 .custom-radio-container .item {
   position: relative;
@@ -4227,9 +4242,6 @@ Custom radio container start
   box-shadow: var(--shadow1);
   color: rgb(var(--white));
 }
-.custom-radio-container .form-check-label .content-box {
-  padding-right: 25px;
-}
 .custom-radio-container .form-check-label .content-box .title {
   font-size: 18px;
   text-transform: capitalize;
@@ -4243,8 +4255,9 @@ Custom radio container start
 }
 .custom-radio-container .form-check-input {
   position: absolute;
-  right: 15px;
+  right: 10px;
   margin-top: 0;
+  display: none;
 }
 .custom-radio-container .form-check-input[type=radio]:checked + .form-check-label {
   background-color: rgb(var(--primary-color), 0.1);
@@ -4729,9 +4742,12 @@ Padding bottom
   .navbar .navbar-nav .nav-link {
     padding: 15px;
   }
+  .navbar .navbar-toggler {
+    display: none;
+  }
   .navbar .nav-right {
     position: absolute;
-    right: 65px;
+    right: 12px;
   }
 }
 @media (max-width: 767px) {
@@ -4740,13 +4756,6 @@ Padding bottom
   }
   .navbar.active {
     padding: 10px 5px;
-  }
-  .navbar .navbar-toggler {
-    display: none;
-  }
-  .navbar .nav-right {
-    position: absolute;
-    right: 12px;
   }
 }
 .rtl .navbar-nav.ms-auto {
@@ -4771,9 +4780,9 @@ Padding bottom
 02. Bottom Mobile, Tab nav section start
 ----------------------------------------------*/
 .bottom-nav {
-  background: var(--bg-color1);
+  background: rgb(var(--bg-color4));
   justify-content: space-around;
-  box-shadow: var(--shadow2);
+  box-shadow: var(--shadow1);
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   height: 55px;
@@ -4850,10 +4859,24 @@ Bottom Mobile, Tab nav end
   filter: blur(3px);
 }
 .hero-swiper .swiper-slide-active {
-  height: 400px;
   filter: blur(0);
 }
 
+@media (min-width: 1200px) {
+  .hero-swiper .swiper-slide-active {
+    height: 400px;
+  }
+}
+@media (max-width: 1199px) {
+  .hero-swiper .swiper-slide-active {
+    height: 300px;
+  }
+}
+@media (max-width: 991px) {
+  .hero-swiper .swiper-slide-active {
+    height: 250px;
+  }
+}
 /*----------------------------------------------
 Hero section end
 ----------------------------------------------*/
@@ -5325,13 +5348,18 @@ Flash deal section end
 
 .product-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(222px, 1fr));
   gap: 20px;
 }
 
 @media (max-width: 991px) {
   .flash-deal-section .countdown h5 {
     font-size: 25px;
+  }
+}
+@media (max-width: 1199px) {
+  .product-container {
+    grid-template-columns: repeat(auto-fit, minmax(217px, 1fr));
   }
 }
 @media (max-width: 575px) {
@@ -5344,7 +5372,7 @@ Flash deal section end
   .product-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
-    gap: 20px;
+    gap: 10px;
   }
 }
 .rtl .flash-sale-carousel .owl-nav {
@@ -5427,6 +5455,9 @@ Trending game section end
 }
 
 @media (max-width: 991px) {
+  .why-choose-us-section .text-box {
+    text-align: center;
+  }
   .why-choose-us-section .img-box {
     max-width: 450px;
   }
@@ -6099,6 +6130,7 @@ Newsletter end
 
 .payment-gateway {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .payment-gateway .item {

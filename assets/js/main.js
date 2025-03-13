@@ -53,91 +53,6 @@ $(document).ready(function () {
     },
   });
 
-  // product-slider carousel
-  $(".flash-sale-carousel").owlCarousel({
-    loop: true,
-    autoplay: true,
-    margin: 20,
-    autoplayTimeout: 3000,
-    // rtl: true,
-    nav: true,
-    dots: false,
-    navText: [
-      "<i class='fa-regular fa-angle-left'></i>",
-      "<i class='fa-regular fa-angle-right'></i>",
-    ],
-    responsive: {
-      0: {
-        items: 2,
-        nav: false,
-        dots: true,
-        dotsEach: 3,
-      },
-      768: {
-        items: 4,
-        nav: true,
-        dots: false,
-      },
-    },
-  });
-
-  $(".trending-items-carousel").owlCarousel({
-    loop: true,
-    autoplay: true,
-    margin: 20,
-    autoplayTimeout: 2000,
-    // rtl: true,
-    nav: true,
-    dots: false,
-    navText: [
-      "<i class='fa-regular fa-angle-left'></i>",
-      "<i class='fa-regular fa-angle-right'></i>",
-    ],
-    responsive: {
-      0: {
-        items: 2,
-        nav: false,
-        dots: true,
-        dotsEach: 4,
-        margin: 10,
-      },
-      768: {
-        items: 3,
-        nav: true,
-        dots: false,
-      },
-      992: {
-        items: 4,
-        nav: true,
-        dots: false,
-      },
-      1200: {
-        items: 6,
-        nav: true,
-        dots: false,
-      },
-    },
-  });
-
-  // img-slider carousel
-  $(".img-carousel").owlCarousel({
-    loop: true,
-    autoplay: true,
-    margin: 10,
-    autoplayTimeout: 2000,
-    // rtl: true,
-    nav: false,
-    dots: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 1,
-      },
-    },
-  });
-
   // cmn select2 start
   $(".cmn-select2").select2();
   // cmn select2 end
@@ -245,9 +160,10 @@ $(document).ready(function () {
       modifier: 3,
       slideShadows: true,
     },
-    autoplay: {
-      delay: 5000,
-    },
+    autoplay: false,
+    // autoplay: {
+    //   delay: 5000,
+    // },
     keyboard: {
       enabled: true,
     },
@@ -255,6 +171,14 @@ $(document).ready(function () {
       thresholdDelta: 70,
     },
     loop: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1, 
+      },
+      768: {
+        slidesPerView: 2,
+      }
+    }
   });
   // Hero slider end
 
