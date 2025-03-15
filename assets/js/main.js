@@ -160,10 +160,9 @@ $(document).ready(function () {
       modifier: 3,
       slideShadows: true,
     },
-    autoplay: false,
-    // autoplay: {
-    //   delay: 5000,
-    // },
+    autoplay: {
+      delay: 5000,
+    },
     keyboard: {
       enabled: true,
     },

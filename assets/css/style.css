@@ -412,6 +412,19 @@ option {
   background-color: rgb(var(--primary-color), 0.8);
 }
 
+.rtl .input-group .input-group-text {
+  border-top-left-radius: 0.375rem !important;
+  border-bottom-left-radius: 0.375rem !important;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.rtl .input-group .form-select {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 0.375rem !important;
+  border-bottom-right-radius: 0.375rem !important;
+}
+
 /*----------------------------------------------
 intlTelInput section start
 ----------------------------------------------*/
@@ -1594,6 +1607,7 @@ Offcanvas end
   display: inline-flex;
   transition: 0.2s background;
   align-items: center;
+  justify-content: center;
   gap: 0.6em;
   font-weight: 500;
   text-transform: capitalize;
@@ -1633,6 +1647,15 @@ Offcanvas end
   transition: 0.2s;
   padding: 3px;
   transform: rotate(-45deg);
+}
+
+.rtl .cmn-btn:hover .arrow::before {
+  left: 0;
+}
+.rtl .cmn-btn .arrow::before {
+  border-width: var(--arrow-stroke) 0 0 var(--arrow-stroke);
+  right: auto;
+  left: 3px;
 }
 
 .cmn-btn2 {
