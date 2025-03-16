@@ -172,100 +172,14 @@ $(document).ready(function () {
     loop: true,
     breakpoints: {
       0: {
-        slidesPerView: 1, 
+        slidesPerView: 1,
       },
       768: {
         slidesPerView: 2,
-      }
-    }
+      },
+    },
   });
   // Hero slider end
-
-  // Countdown start
-  if ($(".countdown").length) {
-    $(".countdown").countdown("2025/3/19", function (event) {
-      $(this).html(
-        event.strftime(
-          '<div class="single-countdown"><h5>%D</h5><span>Days</span> </div> <div class="single-countdown"><h5>%H</h5><span>Hours</span> </div> <div class="single-countdown"><h5>%M</h5><span>Minutes</span> </div> <div class="single-countdown"><h5>%S</h5><span>Second</span> </div>'
-        )
-      );
-    });
-  }
-  // Countdown end
-
-  // Isotope start
-  if ($(".listing-row").length) {
-    $(document).ready(function () {
-      var $grid = $(".listing-row").isotope({
-        itemSelector: ".grid-item",
-        percentPosition: true,
-        masonry: {
-          columnWidth: 1,
-        },
-      });
-
-      var selectedFilter = localStorage.getItem("selectedFilter") || ".all";
-      $grid.isotope({ filter: selectedFilter });
-
-      $(".isotope-btn-group button").removeClass("active");
-      $(
-        '.isotope-btn-group button[data-filter="' + selectedFilter + '"]'
-      ).addClass("active");
-
-      $(".isotope-btn-group").on("click", "button", function () {
-        var filterValue = $(this).attr("data-filter");
-        $grid.isotope({ filter: filterValue });
-        localStorage.setItem("selectedFilter", filterValue);
-
-        $(this).siblings(".active").removeClass("active");
-        $(this).addClass("active");
-      });
-
-      $grid.isotope("layout");
-
-      $(".form-check-input").on("change", function () {
-        $(".review-single-hidden-box").toggle(this.checked);
-        $grid.isotope("layout");
-      });
-    });
-  }
-  // Isotope ends
-
-  //--- BAR FILLAR ---//
-  if ($(".progress-bar").length) {
-    const progressItem = document.getElementsByClassName("progress-item")[0];
-    const progressBars = document.querySelectorAll(".progress-bar");
-
-    function showProgress() {
-      progressBars.forEach((progressBar) => {
-        const value = progressBar.dataset.progress;
-        progressBar.style.opacity = 1;
-        progressBar.style.width = `${value}%`;
-      });
-    }
-
-    function hideProgress() {
-      progressBars.forEach((p) => {
-        p.style.opacity = 0;
-        p.style.width = 0;
-      });
-    }
-
-    window.addEventListener("scroll", () => {
-      const sectionPos = progressItem.getBoundingClientRect().top;
-      const screenPos = window.innerHeight;
-      if (sectionPos < screenPos) {
-        showProgress();
-      } else {
-        hideProgress();
-      }
-    });
-  }
-  //--- BAR FILLAR ---//
-
-  // Aos start
-  AOS.init();
-  // Aos end
 });
 
 // input file preview
@@ -333,35 +247,6 @@ if ($("#telephone").length) {
 }
 // International Telephone Input end
 
-// Increase decrease button start
-document.addEventListener("DOMContentLoaded", (event) => {
-  const cartItemCounts = document.querySelectorAll(".cart-item-count");
-  cartItemCounts.forEach((cartItemCount) => {
-    const decreaseButton = cartItemCount.querySelector("[data-decrease]");
-    const increaseButton = cartItemCount.querySelector("[data-increase]");
-    const valueInput = cartItemCount.querySelector("[data-value]");
-
-    decreaseButton.addEventListener("click", () => {
-      let currentValue = parseInt(valueInput.value);
-      if (currentValue > 1) {
-        valueInput.value = currentValue - 1;
-      }
-    });
-
-    increaseButton.addEventListener("click", () => {
-      let currentValue = parseInt(valueInput.value);
-      valueInput.value = currentValue + 1;
-    });
-  });
-});
-
-// Increase decrement button end
-// Jquery UI start
-if ($("#datepicker").length) {
-  $("#datepicker").datepicker();
-}
-// Jquery UI end
-
 // Copy page url start
 if ($("#copyBtn").length) {
   document.getElementById("copyBtn").addEventListener("click", () => {
@@ -408,64 +293,3 @@ if (document.querySelector(".login-register-form")) {
 }
 
 // input field show hide password end
-
-// mobile menu start
-jQuery("#mobile-menu").meanmenu({
-  meanScreenWidth: "991",
-  meanMenuContainer: ".mobile-menu",
-  meanMenuOpen: "<i class='fal fa-bars'></i>",
-  meanMenuClose: "<i class='far fa-times-circle'></i>",
-});
-// mobile menu end
-
-// Dropdown select with Filter end
-if ($(".search-box2").length) {
-  function handleSelect(searchBox2, searchInput, searchItem) {
-    searchInput.addEventListener("click", function (event) {
-      searchBox2.classList.add("active");
-      event.stopPropagation();
-    });
-
-    window.addEventListener("click", function () {
-      searchBox2.classList.remove("active");
-    });
-
-    searchItem.forEach(function (searchItemSingle) {
-      searchItemSingle.addEventListener("click", function () {
-        const text = searchItemSingle.querySelector(".title");
-        const textContent = text.textContent;
-        searchInput.value = textContent;
-        searchBox2.classList.remove("active");
-      });
-    });
-  }
-
-  const searchBox2 = document.querySelector("#search-box2");
-  const searchInput = document.querySelector("#search-input");
-  const searchItem = document.querySelectorAll("#search-result .search-item");
-  handleSelect(searchBox2, searchInput, searchItem);
-
-  // filter start
-  function filterItems(inputId, items) {
-    const input = document.getElementById(inputId);
-    const filter = input.value.toUpperCase();
-
-    items.forEach((item) => {
-      const title = item.querySelector(".title");
-      const txtValue = title.textContent || title.innerText;
-
-      if (txtValue.toUpperCase().includes(filter)) {
-        item.style.display = "";
-      } else {
-        item.style.display = "none";
-      }
-    });
-  }
-  const filterSearchInputId = "search-input";
-  const filterSearchInput = document.getElementById(filterSearchInputId);
-  const items = document.querySelectorAll("#search-result .search-item");
-  filterSearchInput.addEventListener("keyup", function () {
-    filterItems(filterSearchInputId, items);
-  });
-}
-// Dropdown select with Filter end
