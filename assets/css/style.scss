@@ -80,7 +80,7 @@ Typography
   --transition: all 0.3s ease-in-out;
 }
 
-// primary: #6f4ff2
+// primary: #ffbd20
 
 /*----------------------------------------------
 Reset section start
@@ -6256,7 +6256,6 @@ Products section start
 }
 
 @media (max-width: 575px) {
-
   .product-box {
     .text-box {
       .price .promo-price {
@@ -8117,3 +8116,32 @@ Product details section start
 Product details section end
 ----------------------------------------------*/
 
+/*----------------------------------------------
+Ads bannner section start
+----------------------------------------------*/
+.ads-banner-section {
+  background-color: rgb(var(--bg-color1));
+  padding: 20px 0;
+}
+.ads-box {
+  margin: 0 auto;
+  max-width: 728px;
+  max-height: 90px;
+  display: flex;
+  img {
+    width: 100%;
+  }
+}
+.ads-box2 {
+  margin: 0 auto;
+  max-width: 336px;
+  max-height: 280px;
+  display: flex;
+  img {
+    width: 100%;
+  }
+}
+
+/*----------------------------------------------
+Ads bannner section end
+----------------------------------------------*/

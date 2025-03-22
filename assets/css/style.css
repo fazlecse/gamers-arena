@@ -4965,36 +4965,6 @@ Product category section end
 Brands section end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Exclusive offer section start
-----------------------------------------------*/
-.exclusive-offer-section {
-  background-color: var(--bg-color2);
-}
-
-/*----------------------------------------------
-Exclusive offer section end
-----------------------------------------------*/
-/*----------------------------------------------
-00. Exclusive offer section start
-----------------------------------------------*/
-.trending-items-carousel {
-  position: relative;
-}
-.trending-items-carousel .owl-nav {
-  position: absolute;
-  top: calc(0% - 100px);
-  right: 0;
-}
-
-.rtl .trending-items-carousel .owl-nav {
-  right: auto;
-  left: 0;
-}
-
-/*----------------------------------------------
-Exclusive offer section end
-----------------------------------------------*/
-/*----------------------------------------------
 00. About section start
 ----------------------------------------------*/
 .about-section {
@@ -5017,107 +4987,8 @@ Exclusive offer section end
 About section end
 ----------------------------------------------*/
 /*----------------------------------------------
-Flash deal section end
+Products section start
 ----------------------------------------------*/
-.flash-deal-section {
-  background-color: var(--bg-color2);
-}
-.flash-deal-section .left-side {
-  background-color: var(--bg-color2);
-  padding: 30px;
-  border-radius: 10px;
-  position: relative;
-  z-index: 1;
-}
-.flash-deal-section .left-side::after {
-  position: absolute;
-  content: "";
-  border: 1px dashed rgb(var(--primary-color));
-  left: 7px;
-  top: 7px;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  z-index: -1;
-}
-.flash-deal-section .countdown {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-.flash-deal-section .countdown .single-countdown {
-  text-align: center;
-  font-weight: 500;
-}
-.flash-deal-section .countdown h5 {
-  font-size: 30px;
-  padding: 13px;
-  background-color: var(--bg-color1);
-  border-radius: 12px;
-}
-.flash-deal-section .product-box .text-box .price .promo-price {
-  font-size: 18px;
-  color: rgb(var(--heading-color));
-}
-
-.cart-btn-sm {
-  width: 40px;
-  height: 40px;
-  background-color: var(--moderate-lime-green);
-  color: rgb(var(--white));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-}
-.cart-btn-sm:hover {
-  color: rgb(var(--white));
-}
-
-.flash-product-box:hover {
-  color: rgb(var(--heading-color));
-}
-.flash-product-box:hover .img-box img {
-  transform: scale(1.1);
-}
-.flash-product-box .img-box {
-  height: 250px;
-  overflow: hidden;
-  border-radius: 15px;
-  display: block;
-}
-.flash-product-box .img-box img {
-  height: 100%;
-  width: 100%;
-  border-radius: 15px;
-  transition: var(--transition);
-}
-.flash-product-box .text-box {
-  position: relative;
-}
-.flash-product-box .text-box .title {
-  font-size: 18px;
-}
-.flash-product-box .text-box .promo-price {
-  font-size: 22px;
-  color: rgb(var(--primary-color));
-  font-size: 700;
-}
-.flash-product-box .text-box .line-through {
-  text-decoration: line-through;
-  white-space: nowrap;
-  font-weight: 600;
-}
-.flash-product-box .text-box .discount {
-  position: absolute;
-  background-color: rgb(var(--primary-color));
-  color: rgb(var(--white));
-  padding: 10px 15px;
-  top: -55px;
-  left: 15px;
-  border-radius: 10px;
-}
-
 .product-box {
   display: flex;
   flex-direction: column;
@@ -5226,169 +5097,18 @@ Flash deal section end
   z-index: 1;
 }
 
-.region {
-  font-size: 16px;
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-.region img {
-  border-radius: 16px;
-  width: 20px;
-  height: 20px;
-  border: 1px solid var(--border-color1);
-}
-
-.product-box2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-  border-radius: 8px;
-  background-color: var(--bg-color1);
-  overflow: hidden;
-  transition: var(--transition);
-  border: 1px solid var(--border-color1);
-  outline: 1px solid transparent;
-  height: 100%;
-  padding: 8px;
-}
-.product-box2:hover .img-box img {
-  transform: scale(1.03);
-}
-.product-box2.active {
-  border: 1px solid rgb(var(--primary-color));
-  outline: 1px solid rgb(var(--primary-color));
-}
-.product-box2 .img-box {
-  max-width: 50px;
-  min-width: 50px;
-  height: 50px;
-  overflow: hidden;
-  border-radius: 8px;
-}
-.product-box2 .img-box img {
-  width: 100%;
-  height: 100%;
-  transition: var(--transition);
-  border-radius: 8px;
-}
-.product-box2 .text-box {
-  font-size: 12px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.product-box2 .text-box .title {
-  font-size: 16px;
-  font-weight: 600;
-  color: rgb(var(--heading-color));
-}
-.product-box2 .text-box .name {
-  margin-bottom: 0;
-  font-size: 14px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
-}
-.product-box2 .text-box .discount {
-  font-size: 14px;
-  color: rgb(var(--primary-color));
-  font-weight: 600;
-}
-.product-box2 .left-side {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.product-box2 .bottom-info {
-  margin-top: 10px;
-}
-.product-box2 .stock-short {
-  border-radius: 3px;
-  padding: 4px 10px 5px;
-  background-color: rgb(var(--soft-red), 0.4);
-  color: rgb(var(--white));
-}
-.product-box2 .price {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.product-box2 .price .promo-price {
-  font-weight: 700;
-  font-size: 16px;
-  color: rgb(var(--heading-color));
-}
-.product-box2 .price .line-through {
-  text-decoration: line-through;
-  white-space: nowrap;
-}
-
-.product-box3 {
-  background-color: var(--bg-color2);
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.product-box3 .img-box .owl-item img {
-  height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 8px;
-  width: 100%;
-}
-.product-box3 .text-box .title {
-  font-size: 18px;
-  font-weight: 600;
-}
-.product-box3 .text-box .price {
-  margin-top: 5px;
-}
-.product-box3 .owl-dots {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.flash-sale-carousel {
-  position: relative;
-}
-.flash-sale-carousel .owl-nav {
-  position: absolute;
-  top: calc(0% - 100px);
-  right: 0;
-}
-
 .product-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(222px, 1fr));
   gap: 20px;
 }
 
-@media (max-width: 991px) {
-  .flash-deal-section .countdown h5 {
-    font-size: 25px;
-  }
-}
 @media (max-width: 1199px) {
   .product-container {
     grid-template-columns: repeat(auto-fit, minmax(217px, 1fr));
   }
 }
 @media (max-width: 575px) {
-  .flash-deal-section-inner {
-    padding: 20px;
-  }
   .product-box .text-box .price .promo-price {
     font-size: 16px;
   }
@@ -5398,73 +5118,8 @@ Flash deal section end
     gap: 10px;
   }
 }
-.rtl .flash-sale-carousel .owl-nav {
-  right: auto;
-  left: 0;
-}
-.rtl .trending-offers-carousel .owl-nav {
-  right: auto;
-  left: 0;
-}
-.rtl .trending-offers-carousel .owl-nav .owl-next {
-  transform: rotate(180deg);
-}
-.rtl .trending-offers-carousel .owl-nav .owl-prev {
-  transform: rotate(180deg);
-}
-
 /*----------------------------------------------
-Flash deal section end
-----------------------------------------------*/
-/*----------------------------------------------
-00. Trending game section start
-----------------------------------------------*/
-.trending-game-section {
-  background-color: var(--bg-color1);
-}
-
-.category-box {
-  background-color: var(--bg-color2);
-  border: 1px solid var(--border-color1);
-  padding: 10px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.category-box:hover .img-box img {
-  transform: scale(1.03);
-}
-.category-box .img-box {
-  overflow: hidden;
-  border-radius: 5px;
-  height: 170px;
-}
-.category-box .img-box img {
-  border-radius: 5px;
-  transition: var(--transition);
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.category-box .text-box .title {
-  font-weight: 500;
-  font-size: 17px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
-  color: rgb(var(--heading-color));
-}
-.category-box .text-box .title:hover {
-  color: rgb(var(--primary-color));
-}
-
-/*----------------------------------------------
-Trending game section end
+Products section end
 ----------------------------------------------*/
 /*----------------------------------------------
 00. Why choose us section start
@@ -5548,16 +5203,6 @@ Why choose us section end
 
 /*----------------------------------------------
 Faq end
-----------------------------------------------*/
-/*----------------------------------------------
-Buy game id section start
-----------------------------------------------*/
-.buy-game-id-section {
-  background-color: var(--bg-color1);
-}
-
-/*----------------------------------------------
-Buy game id section end
 ----------------------------------------------*/
 /*----------------------------------------------
 08. Testimonial section start
@@ -6945,290 +6590,33 @@ Product details section start
 Product details section end
 ----------------------------------------------*/
 /*----------------------------------------------
-00. Cart section start 
+Ads bannner section start
 ----------------------------------------------*/
-.cart-table table {
-  color: var(--body-color);
+.ads-banner-section {
+  background-color: rgb(var(--bg-color1));
+  padding: 20px 0;
 }
-.cart-table tbody td {
-  padding: 20px 15px;
-}
-.cart-table thead tr {
-  background-color: var(--bg-color2);
-}
-.cart-table thead th {
-  text-transform: capitalize;
-  padding: 20px 15px;
-}
-.cart-table thead th:first-child {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-.cart-table thead th:last-child {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.cart-table tbody,
-.cart-table td,
-.cart-table tfoot,
-.cart-table th,
-.cart-table thead,
-.cart-table tr {
-  border: none;
-}
-.cart-table tbody tr {
-  border-bottom: 1px solid var(--border-color1);
-  border-radius: 10px;
-  margin: 10px 0;
-}
-.cart-table .cart-item {
+
+.ads-box {
+  margin: 0 auto;
+  max-width: 728px;
+  max-height: 90px;
   display: flex;
-  align-items: center;
-  gap: 10px;
 }
-.cart-table .cart-item .img-box {
-  width: 60px;
-  min-width: 60px;
-  height: 60px;
-}
-.cart-table .cart-item .img-box img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 8px;
-}
-.cart-table .cart-item .title {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-}
-
-@media (min-width: 768px) {
-  .cart-table .cart-item-count {
-    margin: 0 auto;
-  }
-}
-.rtl .cart-table thead th:first-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.rtl .cart-table thead th:last-child {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-/*----------------------------------------------
-Cart section end
-----------------------------------------------*/
-/*----------------------------------------------
-Reviews details section start 
-----------------------------------------------*/
-.reviews-details-section {
-  background-color: var(--bg-color1);
-}
-.reviews-details-section .isotop-content {
-  background-color: var(--bg-color1);
-  border: 1px solid var(--border-color1);
-  padding: 25px;
-  border-radius: 20px;
-  font-size: 16px;
-}
-
-.sidebar-card-box {
-  background-color: var(--bg-color2);
-  padding: 25px;
-  border-radius: 12px;
-}
-.sidebar-card-box .header-box {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border-bottom: 1px solid var(--border-color1);
-  padding-bottom: 20px;
-}
-.sidebar-card-box .header-box .img-box {
-  width: 90px;
-  min-width: 90px;
-  height: 100px;
-}
-.sidebar-card-box .header-box .img-box img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.reviews-rating-box {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-}
-.reviews-rating-box .item {
-  text-align: center;
-}
-
-.progress-box .progress-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.progress-box .progress-item h6 {
-  max-width: 80px;
+.ads-box img {
   width: 100%;
 }
-.progress-box .progress-item .progress {
+
+.ads-box2 {
+  margin: 0 auto;
+  max-width: 336px;
+  max-height: 280px;
+  display: flex;
+}
+.ads-box2 img {
   width: 100%;
-  height: 5px;
-}
-.progress-box .progress-item .progress .progress-bar {
-  background-color: rgb(var(--primary-color));
-  transition: all 5s;
-}
-
-.reviews-single {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-}
-.reviews-single:not(:last-child) {
-  margin-bottom: 20px;
-}
-.reviews-single .left-side {
-  display: flex;
-  gap: 10px;
-  min-width: 215px;
-}
-.reviews-single .left-side .img-box {
-  width: 45px;
-  min-width: 45px;
-  height: 45px;
-}
-.reviews-single .left-side .img-box img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-.reviews-single .left-side .text-box .title {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.reviews-single .left-side .text-box .title i {
-  font-size: 15px;
-  color: rgb(var(--primary-color));
-}
-.reviews-single .left-side .text-box .contact-item {
-  font-size: 16px;
-}
-.reviews-single .right-side {
-  display: flex;
-  gap: 5px;
-}
-.reviews-single .right-side .reviews {
-  font-size: 16px;
-}
-
-@media (max-width: 767px) {
-  .reviews-single {
-    flex-direction: column;
-  }
-  .reviews-single .right-side {
-    flex-direction: column;
-  }
-}
-/*----------------------------------------------
-Reviews details section end 
-----------------------------------------------*/
-/*----------------------------------------------
-Cart section start
-----------------------------------------------*/
-.cart-section {
-  background-color: var(--bg-color1);
 }
 
 /*----------------------------------------------
-Cart section section end 
-----------------------------------------------*/
-/*----------------------------------------------
-Checkout section start
-----------------------------------------------*/
-.checkout-section {
-  background-color: var(--bg-color1);
-}
-
-/*----------------------------------------------
-Checkout section section end 
-----------------------------------------------*/
-/*----------------------------------------------
-Sell post details section start
-----------------------------------------------*/
-.sell-post-details-section {
-  background-color: var(--bg-color1);
-}
-
-@media (min-width: 576px) {
-  .sell-post-details-section .product-box3 {
-    flex-direction: row;
-    padding: 20px;
-    align-items: center;
-  }
-  .sell-post-details-section .product-box3 .img-box {
-    width: 200px;
-    min-width: 200px;
-    height: 200px;
-  }
-  .sell-post-details-section .product-box3 .img-box .owl-item img {
-    height: 200px;
-  }
-  .sell-post-details-section .product-box3 .text-box .title {
-    font-size: 20px;
-  }
-}
-/*----------------------------------------------
-Sell post details section end 
-----------------------------------------------*/
-/*----------------------------------------------
-Offer chat section start 
-----------------------------------------------*/
-.offer-conversion-section {
-  background-color: var(--bg-color1);
-}
-
-.client-question-box {
-  background-color: var(--bg-color2);
-  padding: 10px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.client-question-box .img-box img {
-  width: 40px;
-}
-
-@media (min-width: 576px) {
-  .offer-conversion-section .product-box3 {
-    flex-direction: row;
-    padding: 15px;
-    align-items: center;
-  }
-  .offer-conversion-section .product-box3 .img-box {
-    width: 200px;
-    min-width: 200px;
-    height: 200px;
-  }
-  .offer-conversion-section .product-box3 .img-box .owl-item img {
-    height: 200px;
-  }
-}
-/*----------------------------------------------
-Offer chat section end 
+Ads bannner section end
 ----------------------------------------------*/

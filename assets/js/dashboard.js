@@ -82,22 +82,22 @@ $(document).ready(function () {
         var options = {
             series: [{
                 name: 'Investment',
-                color: '#567eae',
+                color: '#825c00',
                 data: [44, 55, 57, 56, 61, 58, 63, 60, 66, 40, 45, 50]
             }, {
                 name: 'Payout',
-                color: '#32c36c',
+                color: '#ffbd20',
                 data: [76, 85, 101, 98, 87, 105, 91, 114, 94, 60,
                     65, 70]
             },
             {
                 name: 'Deposit',
-                color: '#5a56ae',
+                color: '#d2ff20',
                 data: [35, 41, 36, 26, 45, 48, 52, 53, 41, 80, 85, 90]
             },
             {
                 name: 'Deposit Bonus',
-                color: '#e7bb89',
+                color: '#d46dff',
                 data: [35, 41, 36, 26, 45, 48, 52, 53, 41, 30, 35, 40]
             }
             ],
