@@ -53,6 +53,33 @@ $(document).ready(function () {
     },
   });
 
+  // Brands carousel
+  $(".product-slider").owlCarousel({
+    loop: true,
+    autoplay: true,
+    margin: 10,
+    nav: false,
+    // dots: false,
+    // rtl: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      450: {
+        items: 2,
+      },
+      576: {
+        items: 2,
+      },
+      992: {
+        items: 3,
+      },
+      1200: {
+        items: 5,
+      },
+    },
+  });
+
   // cmn select2 start
   $(".cmn-select2").select2();
   // cmn select2 end
@@ -180,6 +207,74 @@ $(document).ready(function () {
     },
   });
   // Hero slider end
+  
+// input field show hide password end
+    // Isotope start
+    if ($('.listing-row').length) {
+      $(document).ready(function () {
+          var $grid = $('.listing-row').isotope({
+              itemSelector: '.grid-item',
+              percentPosition: true,
+              masonry: {
+                  columnWidth: 1
+              }
+          });
+
+          var selectedFilter = localStorage.getItem('selectedFilter') || '.all';
+          $grid.isotope({ filter: selectedFilter });
+
+          $('.isotope-btn-group button').removeClass('active');
+          $('.isotope-btn-group button[data-filter="' + selectedFilter + '"]').addClass('active');
+
+          $('.isotope-btn-group').on('click', 'button', function () {
+              var filterValue = $(this).attr('data-filter');
+              $grid.isotope({ filter: filterValue });
+              localStorage.setItem('selectedFilter', filterValue);
+
+              $(this).siblings('.active').removeClass('active');
+              $(this).addClass('active');
+          });
+
+          $grid.isotope('layout');
+
+          $('.form-check-input').on('change', function () {
+              $('.review-single-hidden-box').toggle(this.checked);
+              $grid.isotope('layout');
+          });
+      });
+  }
+  // Isotope ends
+  //--- BAR FILLAR ---//
+  if ($(".progress-bar").length) {
+    const progressItem = document.getElementsByClassName("progress-item")[0];
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    function showProgress() {
+        progressBars.forEach(progressBar => {
+            const value = progressBar.dataset.progress;
+            progressBar.style.opacity = 1;
+            progressBar.style.width = `${value}%`;
+        });
+    }
+
+    function hideProgress() {
+        progressBars.forEach(p => {
+            p.style.opacity = 0;
+            p.style.width = 0;
+        });
+    }
+
+    window.addEventListener('scroll', () => {
+        const sectionPos = progressItem.getBoundingClientRect().top;
+        const screenPos = window.innerHeight;
+        if (sectionPos < screenPos) {
+            showProgress();
+        } else {
+            hideProgress();
+        }
+    });
+}
+//--- BAR FILLAR ---//
 });
 
 // input file preview
@@ -291,5 +386,3 @@ if (document.querySelector(".login-register-form")) {
     });
   });
 }
-
-// input field show hide password end

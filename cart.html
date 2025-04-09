@@ -4,21 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Giftily-Dz</title>
-    <!-- Favicon link -->
+    <title>CarCraze</title>
+    <!-- Favicon-link -->
     <link
       rel="shortcut icon"
-      href="./assets/img/logo/favicon.png"
+      href="assets/img/logo/favicon.png"
       type="image/x-icon"
     />
-    <!-- Fontawesome6 Css link -->
+
+    <!-- Fontawesome6-Js-link -->
     <link rel="stylesheet" href="assets/css/all.min.css" />
-    <!-- Bootstrap5 Css link -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <!-- Bootstrap5-Css-link -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <!-- Owl carousel Css link -->
+    <!-- Owl-carousel-Css-link -->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
-    <!-- select2 Css link -->
+    <!-- Slick-slider-Css-link -->
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <!-- select2-Css-link -->
     <link rel="stylesheet" href="assets/css/select2.min.css" />
 
     <!-- Style Css link -->
@@ -28,7 +33,19 @@
   <body onload="preloaderFunction()" class="">
     <!-- Preloader section start -->
     <div id="preloader">
-      <img src="./assets/img/preloader/game.png" alt="" />
+      <figure class="loader">
+        <div class="car">
+          <span class="body"></span>
+          <span class="wheels"></span>
+        </div>
+        <div class="strikes">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </figure>
     </div>
     <!-- Preloader section end -->
 
@@ -351,130 +368,278 @@
     </ul>
     <!-- Bottom Mobile Tab nav section end -->
 
-    <!-- Ads banner start -->
-    <section class="ads-banner-section">
-      <a href="" class="ads-box">
-        <img src="./assets/img/ads/dummy_728x90_ffffff_cccccc.png" alt="" />
-      </a>
-    </section>
-    <!-- Ads banner end -->
-
-    <!-- login-signup section start -->
-    <section class="login-register-section">
+    <!-- Cart section start -->
+    <section class="cart-section">
       <div class="container">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-lg-5 col-md-9">
-            <div class="login-register-form">
-              <form>
-                <div class="section-header">
-                  <h3>Welcome back!</h3>
-                  <div class="description">
-                    Hey Enter your details to get sign in to your account
-                  </div>
-                </div>
-                <div class="row g-2">
-                  <div class="col-sm-4">
-                    <button type="submit" class="social-btn w-100">
-                      <img
-                        src="assets/img/login-signup/google.png"
-                        alt="Giftily-Dz"
-                      />Google
-                    </button>
-                  </div>
-                  <div class="col-sm-4">
-                    <button type="submit" class="social-btn w-100">
-                      <img
-                        src="assets/img/login-signup/facebook.png"
-                        alt="Giftily-Dz"
-                      />Facebook
-                    </button>
-                  </div>
-                  <div class="col-sm-4">
-                    <button type="submit" class="social-btn w-100">
-                      <img
-                        src="assets/img/login-signup/apple-logo.png"
-                        alt="Giftily-Dz"
-                      />Apple
-                    </button>
-                  </div>
-                </div>
-                <hr class="divider" />
-                <div class="row g-4">
-                  <div class="col-12">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="exampleInputEmail1"
-                      placeholder="Username or Email"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <div class="password-box">
-                      <input
-                        type="password"
-                        class="form-control password"
-                        id="exampleInputPassword1"
-                        placeholder="Password"
-                      />
-                      <i class="password-icon fa-regular fa-eye"></i>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div
-                      class="form-check d-flex justify-content-between flex-wrap gap-2"
-                    >
-                      <div class="check">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          id="exampleCheck1"
-                        />
-                        <label class="form-check-label" for="exampleCheck1"
-                          >Remember me</label
-                        >
-                      </div>
-                      <div class="forgot highlight">
-                        <a href="">Forgot password?</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button type="submit" class="cmn-btn mt-30 w-100">
-                  Log In
-                  <div class="arrow-wrapper">
-                    <div class="arrow"></div>
-                  </div>
-                </button>
-
-                <div class="pt-20 text-center">
-                  Don't have an account?
-                  <p class="mb-0 highlight mt-1">
-                    <a href="register.html">Create an account</a>
-                  </p>
-                </div>
-              </form>
+        <div class="row g-4 g-sm-5">
+          <div class="col-lg-8">
+            <div class="d-flex justify-content-between gap-3">
+              <h4 class="mb-0">Shopping Cart</h4>
+              <h4 class="mb-0">(04 Items)</h4>
+            </div>
+            <hr class="cmn-hr2" />
+            <div class="cart-table">
+              <div class="table-responsive">
+                <table class="table table-striped align-middle">
+                  <thead>
+                    <tr>
+                      <th scope="col">Product Details</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">price</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Remove</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Product Details">
+                        <div class="cart-item">
+                          <a href="" class="img-box">
+                            <img
+                              src="./assets/img/cards/1.webp"
+                              alt=""
+                            />
+                          </a>
+                          <div class="text-box">
+                            <h6 class="mb-1 title">
+                              <a href="">Gift Card 10 INR IN</a>
+                            </h6>
+                            <small>Discount: -2%</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td data-label="Quantity">
+                        <div class="item-count">
+                          <button
+                            class="btn-inc-dec"
+                            data-decrease="data-decrease"
+                          >
+                            <i class="fa-regular fa-minus"></i>
+                          </button>
+                          <input
+                            data-value="data-value"
+                            type="number"
+                            value="2"
+                          />
+                          <button
+                            class="btn-inc-dec"
+                            data-increase="data-increase"
+                          >
+                            <i class="fa-regular fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td data-label="Amount">
+                        <span>$28.00</span>
+                      </td>
+                      <td data-label="Total">
+                        <span>$506.00</span>
+                      </td>
+                      <td data-label="Remove">
+                        <a href="" class="remove-btn">
+                          <i class="fa-regular fa-trash"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-label="Product Details">
+                        <div class="cart-item">
+                          <a href="" class="img-box">
+                            <img
+                              src="./assets/img/cards/2.webp"
+                              alt=""
+                            />
+                          </a>
+                          <div class="text-box">
+                            <h6 class="mb-1 title">
+                              <a href="">Gift Card 25 INR IN</a>
+                            </h6>
+                            <small>Discount: -2%</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td data-label="Quantity">
+                        <div class="item-count">
+                          <button
+                            class="btn-inc-dec"
+                            data-decrease="data-decrease"
+                          >
+                            <i class="fa-regular fa-minus"></i>
+                          </button>
+                          <input
+                            data-value="data-value"
+                            type="number"
+                            value="2"
+                          />
+                          <button
+                            class="btn-inc-dec"
+                            data-increase="data-increase"
+                          >
+                            <i class="fa-regular fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td data-label="Amount">
+                        <span>$28.00</span>
+                      </td>
+                      <td data-label="Total">
+                        <span>$506.00</span>
+                      </td>
+                      <td data-label="Remove">
+                        <a href="" class="remove-btn">
+                          <i class="fa-regular fa-trash"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-label="Product Details">
+                        <div class="cart-item">
+                          <a href="" class="img-box">
+                            <img src="./assets/img/cards/3.webp" alt="" />
+                          </a>
+                          <div class="text-box">
+                            <h6 class="mb-1 title">
+                              <a href="">Gift Card 100 INR IN</a>
+                            </h6>
+                            <small>Discount: -3%</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td data-label="Quantity">
+                        <div class="item-count">
+                          <button
+                            class="btn-inc-dec"
+                            data-decrease="data-decrease"
+                          >
+                            <i class="fa-regular fa-minus"></i>
+                          </button>
+                          <input
+                            data-value="data-value"
+                            type="number"
+                            value="2"
+                          />
+                          <button
+                            class="btn-inc-dec"
+                            data-increase="data-increase"
+                          >
+                            <i class="fa-regular fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td data-label="Amount">
+                        <span>$28.00</span>
+                      </td>
+                      <td data-label="Total">
+                        <span>$506.00</span>
+                      </td>
+                      <td data-label="Remove">
+                        <a href="" class="remove-btn">
+                          <i class="fa-regular fa-trash"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td data-label="Product Details">
+                        <div class="cart-item">
+                          <a href="" class="img-box">
+                            <img
+                              src="./assets/img/cards/4.webp"
+                              alt=""
+                            />
+                          </a>
+                          <div class="text-box">
+                            <h6 class="mb-1 title">
+                              <a href="">Gift Card 50 INR IN</a>
+                            </h6>
+                            <small>Discount: -0%</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td data-label="Quantity">
+                        <div class="item-count">
+                          <button
+                            class="btn-inc-dec"
+                            data-decrease="data-decrease"
+                          >
+                            <i class="fa-regular fa-minus"></i>
+                          </button>
+                          <input
+                            data-value="data-value"
+                            type="number"
+                            value="2"
+                          />
+                          <button
+                            class="btn-inc-dec"
+                            data-increase="data-increase"
+                          >
+                            <i class="fa-regular fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td data-label="Amount">
+                        <span>$28.00</span>
+                      </td>
+                      <td data-label="Total">
+                        <span>$506.00</span>
+                      </td>
+                      <td data-label="Remove">
+                        <a href="" class="remove-btn">
+                          <i class="fa-regular fa-trash"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="mt-30">
+              <a href="" class="view-all-btn"
+                ><i class="fa-regular fa-arrow-left"></i> Continue Shopping</a
+              >
             </div>
           </div>
-          <div class="col-lg-6 d-none d-lg-block">
-            <div class="login-register-img-box">
-              <img
-                src="./assets/img/login-signup/omen-valorant-character-player.png"
-                alt=""
-              />
+          <div class="col-lg-4">
+            <div class="card mb-20">
+              <div class="card-body">
+                <h5 class="mb-10">Have a Coupon Code?</h5>
+                <div class="search-box3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Coupon code"
+                  />
+                  <button type="submit" class="search-btn">Apply</button>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h4 class="mb-20">Your cart total</h4>
+                <div class="cmn-list2">
+                  <div class="item">
+                    <span>Subtotal :</span>
+                    <h6 class="mb-0">$125</h6>
+                  </div>
+                  <div class="item">
+                    <span>Discount :</span>
+                    <h6 class="mb-0">$25</h6>
+                  </div>
+                  <hr />
+                  <div class="item">
+                    <h5>Total :</h5>
+                    <h5 class="mb-0">$100</h5>
+                  </div>
+                </div>
+                <a href="checkout.html" class="cmn-btn mt-20 w-100"
+                  ><span>Proceed To Checkout</span></a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- login-signup section end -->
-
-    <!-- Ads banner start -->
-    <section class="ads-banner-section">
-      <a href="" class="ads-box">
-        <img src="./assets/img/ads/dummy_728x90_ffffff_cccccc.png" alt="" />
-      </a>
-    </section>
-    <!-- Ads banner end -->
+    <!-- Cart section end -->
 
     <!-- Footer Section start -->
     <section class="footer-section">
@@ -938,18 +1103,42 @@
     </div>
     <!-- Modal section end -->
 
-    <!-- Jquery Js link -->
+    <script>
+      // counter start
+      const itemCounts = document.querySelectorAll(".item-count");
+      itemCounts.forEach((itemCount) => {
+        const decreaseBtn = itemCount.querySelector("[data-decrease]");
+        const increaseBtn = itemCount.querySelector("[data-increase]");
+        const valueInput = itemCount.querySelector("[data-value]");
+
+        decreaseBtn.addEventListener("click", () => {
+          const currentValue = parseInt(valueInput.value);
+          if (currentValue > 1) {
+            valueInput.value = currentValue - 1;
+          }
+        });
+        increaseBtn.addEventListener("click", () => {
+          const currentValue = parseInt(valueInput.value);
+          valueInput.value = currentValue + 1;
+        });
+      });
+      // counter end
+    </script>
+
+    <!-- Jquery_Js_link -->
+    <!-- <script src="assets/js/jquery-3.6.1.min.js"></script> -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap Js link -->
+
+    <!-- Bootstrap_Js_link -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Owl carausel Js link -->
+    <!-- Owl_carausel_Js_link -->
     <script src="assets/js/owl.carousel.min.js"></script>
-    <!-- Swiper Js link -->
+    <!-- Swiper_Js_link -->
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- select2 Js link -->
+    <!-- select2_Js_link -->
     <script src="assets/js/select2.min.js"></script>
 
-    <!-- Main Js link -->
+    <!-- Main_Js_link -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
